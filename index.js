@@ -61,6 +61,9 @@ app.post("/api/upload", upload.single("file"), (request, response) => {
 });
 
 // Routers
+app.get("/", (request, response) => {
+	return response.status(200).send("This is Digital Stories Backend");
+});
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
